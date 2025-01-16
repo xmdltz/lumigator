@@ -18,11 +18,13 @@ router = APIRouter()
 async def create_experiment(
     service: ExperimentServiceDep, request: ExperimentCreate, background_tasks: BackgroundTasks
 ) -> ExperimentResponse:
-    return ExperimentResponse.model_validate(service.create_experiment(request, background_tasks))
+    return ExperimentResponse.model_validate(
+        service.create_experiment(request, background_tasks).model_dump()
+    )
 
 
 @router.get("/{experiment_id}")
-def get_experiment(service: JobServiceDep, experiment_id: UUID) -> ExperimentResponse:
+def get_experiment(service: ExperimentServiceDep, experiment_id: UUID) -> ExperimentResponse:
     return ExperimentResponse.model_validate(service.get_job(experiment_id).model_dump())
 
 
