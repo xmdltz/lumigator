@@ -8,7 +8,7 @@ evaluate==0.4.2
 lm-eval==0.4.3
 loguru==0.7.2
 mistralai==0.4.2
-nltk==3.8.1
+nltk==3.9.3
 numpy<2.0.0
 openai==1.55.3
 protobuf>=3.20.2
@@ -18,7 +18,7 @@ ray[default]==2.30.0
 ruff==0.5.5
 s3fs==2024.5.0
 scipy==1.13.1
-sentencepiece==0.2.0
-transformers==4.43.4
-urllib3>=1.26.18,<2
+sentencepiece==0.2.1
+transformers==4.53.0
+urllib3>=1.26.18,<3
 wandb==0.16.3
